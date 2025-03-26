@@ -1,0 +1,137 @@
+<<<<<<< Updated upstream
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nepflix(jorannap.nl)</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2023.ico">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<body>
+ <header>
+    <nav>
+        <a class="NavBarItem" href="index.html"><img src="img/Netflix_logo.svg" alt=""></a>
+        <a class="NavBarItem active" href="index.html">Homepagina</a>
+        <a class="NavBarItem" href="index.html">Series</a>
+        <a class="NavBarItem" href="Films/films.html">Films</a>
+        <a class="NavBarItem" href="index.html">Nieuw en populair</a>
+        <a class="NavBarItem" href="index.html">Mijn lijst</a>
+        
+        
+    </nav>
+</header>
+    <main class="main">
+    </main>
+
+
+  <h2>Continue watching:</h2>
+
+        <!-- Movie Container -->
+        <div class="container mt-4">
+            <h2 class="mb-3 text-center">Movies</h2>
+            <div class="position-relative">
+                <!-- Left Scroll Button -->
+                <button class="scroll-btn left" onclick="scrollLeft()">&#9665;</button>
+        
+                <!-- Movie Container -->
+                <div class="horizontal-scroll" id="scroll-container">
+                    <div class="movie-card"><img src="img/20210618_114823761_iOS.jpg" alt="Movie 1"></div>
+                    <div class="movie-card"><img src="img/20210618_114823761_iOS.jpg" alt="Movie 2"></div>
+                    <div class="movie-card"><img src="img/20210618_114823761_iOS.jpg" alt="Movie 3"></div>
+                    <div class="movie-card"><img src="img/20210618_114823761_iOS.jpg" alt="Movie 4"></div>
+                    <div class="movie-card"><img src="img/20210618_114823761_iOS.jpg" alt="Movie 5"></div>
+                    <div class="movie-card"><img src="img/20210618_114823761_iOS.jpg" alt="Movie 6"></div>
+                    <div class="movie-card"><img src="img/20210618_114823761_iOS.jpg" alt="Movie 7"></div>
+                    <div class="movie-card"><img src="img/20210618_114823761_iOS.jpg" alt="Movie 8"></div>
+                    <div class="movie-card"><img src="img/20210618_114823761_iOS.jpg" alt="Movie 9"></div>
+                </div>
+        
+                <!-- Right Scroll Button -->
+                <button class="scroll-btn right" onclick="scrollRight()">&#9655;</button>
+            </div>
+        </div>
+    </div>
+</div>
+<BR></BR><BR></BR><BR></BR><BR></BR><BR></BR>
+
+  <!-- <div class="scroll-container">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+  </div>
+  <br>
+  <h2>New on Netflix:</h2>
+  <div class="scroll-container">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+    <img src="https://placehold.co/400">
+  </div> -->
+
+
+  <script>
+    const scrollContainer = document.getElementById("scroll-container");
+    let movieWidth = scrollContainer.children[0].offsetWidth + 10; // Width of one movie (including gap)
+    let moviesScrolled = 0;
+    let totalMovies = scrollContainer.children.length;
+    let fullLoop = false;
+
+    function scrollRight() {
+        // Move first movie to end for smooth looping
+        let firstMovie = scrollContainer.firstElementChild;
+        scrollContainer.appendChild(firstMovie);
+        
+        moviesScrolled++;
+        
+        // After full loop, switch to 7 movies (half movie on each side)
+        if (moviesScrolled >= totalMovies) {
+            fullLoop = true;
+            document.querySelectorAll(".movie-card").forEach(card => {
+                card.style.flex = "0 0 calc(100% / 7)";
+            });
+        }
+    }
+
+    function scrollLeft() {
+        // Move last movie to front for smooth looping
+        let lastMovie = scrollContainer.lastElementChild;
+        scrollContainer.prepend(lastMovie);
+
+        moviesScrolled--;
+
+        // If going back to the start, reset to 6.5 movies
+        if (moviesScrolled <= 0) {
+            fullLoop = false;
+            document.querySelectorAll(".movie-card").forEach(card => {
+                card.style.flex = "0 0 calc(100% / 6.5)";
+            });
+        }
+    }
+</script>
+
+
+
+</body>
+
+</html>
+>>>>>>> Stashed changes
