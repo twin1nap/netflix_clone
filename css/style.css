@@ -54,8 +54,8 @@ nav {
 
 /* Styling for if you hover over with the cursor */
 .NavBarItem:hover {
-    background-color:pink;
-    color: blue;
+    background-color:black;
+    color: #831010;
 }
 
 .dropdown {
@@ -98,7 +98,7 @@ nav {
 /* Hover effect */
 .SubNavItem:hover {
     background-color: black;
-    color: white;
+    color: #831010;
 }
 
 /* END NAVIGATION MENU STYLING */
