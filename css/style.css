@@ -1,6 +1,6 @@
-/* body{
-    background-color: blue;
-} */
+html {
+    background-color: black;
+}
 #player{
     width: 100%;
 }
@@ -38,9 +38,20 @@ div.scroll-container {
   
 /* NAVIGATION MENU STYLING! */
 
+nav {
+    display: flex;  
+    gap: 15px;  
+    background-color: black;  
+}
+
 .dropdown {
     position: relative;
     display: inline-block; 
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
 
 .dropdown > .NavBarItem {
