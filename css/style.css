@@ -1,6 +1,9 @@
 html {
-    background-color: black;
     font-family: "Netflix-sans";
+}
+html body{
+    background-color: #141414;
+    color: #e5e5e5;
 }
 #player{
     width: 100%;
@@ -34,17 +37,19 @@ nav a.active{
 }
 
 div.scroll-container {
-    background-color: #333;
+    /* background-color: #333; */
     padding: 10px;
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     overflow-x: auto; 
-  }
-  
-  div.scroll-container img {
+}
+
+div.scroll-container img {
+    width: 230.125px;
     padding: 10px;
     max-width: 100%; 
     height: auto;
+    border-radius: 14px;
   }
 
   
