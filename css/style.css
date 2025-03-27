@@ -44,13 +44,20 @@ div.scroll-container {
     overflow-x: auto; 
 }
 
-div.scroll-container img {
-    width: 230.125px;
+div.scroll-container a {
     padding: 10px;
-    max-width: 100%; 
-    height: auto;
-    border-radius: 14px;
-  }
+    max-width: 100%;
+    width: 230.125px;
+    margin: 0 3px;
+    
+    /* background-image: url(https://occ-0-769-1490.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABR_cKboUYKjANkG-HxyrnKram89LRQq7H0M8zWKZcapua7eBpYJJQdDSIPWaNsV2AOKLJly8je0jaxI3l8u-oDwxRfw63lqarhJZfRzBT3sRHbklHhsBXRVa1ExzR6LH6Rgb9UOUOPLTeyEjBeUAlaLPMmJ903bvIakc5FITnQX1ZZmzBNA6DqKTtQQpQ0TXKdRfgXPkclGkrovw-Y_IPd4TVs1d_Jj5X6skTooQTMrzR7ttDtcAbKPPSsUCIucGr3uFaAccvETTOyw7iFaeh9Og-hvW9G2QQgIQoR-LeHtkTv8YgmnGl7Ujbvrlm2pjmd6GW2p6h85hJ_se7f91OoUjpRRF.webp?r=686); */
+    
+}
+div.scroll-container img{
+    border-radius: 5px;    
+    width: 230.125px;
+}
+
 
   
 /* NAVIGATION MENU STYLING! */
@@ -64,11 +71,6 @@ nav {
 .dropdown {
     position: relative;
     display: inline-block; 
-}
-
-a{
-    text-decoration: none;
-    color: white;
 }
 
 .dropdown > .NavBarItem {
