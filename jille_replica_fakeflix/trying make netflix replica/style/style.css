@@ -1,19 +1,17 @@
-html {
-    background-color: black;
-    font-family: "Netflix-sans";
-}
-#player{
-    width: 100%;
-}
-@font-face {
-    font-family: 'Netflix-sans';
-    src: url('/fonts/NetflixSans-Regular.otf')
+html h2 {
+    color: white;
 }
 
 body header{
     font-size: 14px;
-    background-image: url(/img/20210618_114823761_iOS.jpg);
+    background-image: url(https://placehold.co/1800);
     height: 864px;
+    width: 100%;
+    
+}
+
+main {
+    background-color: #000000;
 }
 header nav{
     align-items: center;
@@ -28,10 +26,14 @@ nav a{
     text-decoration: none;
     
 }
-nav a.active{
-    color: #ffffff;
-    font-weight: bold;
+
+
+nav {
+    display: flex;  
+    gap: 15px;  
+    
 }
+
 
 div.scroll-container {
     background-color: #000000;
@@ -40,30 +42,27 @@ div.scroll-container {
     width: 100%;
     overflow-x: auto; 
   }
-  
-  div.scroll-container img {
-    padding: 10px;
-    max-width: 100%; 
-    height: auto;
-  }
 
-  
-/* NAVIGATION MENU STYLING! */
-
-nav {
-    display: flex;  
-    gap: 15px;  
-    
+  nav a.active{
+    color: #ffffff;
+    font-weight: bold;
 }
+
+/* --------------TESTING----------------- */
+
+
+.HZScrollbar {
+    width: 50%;
+}
+
+
+
+
 
 .dropdown {
     position: relative;
-    display: inline-block; 
-}
+    display: inline-block;  /* dit zorgt ervoor zodat alleen als er over de tekst wordt gehovverd dan popt hij het menu uit. */
 
-a{
-    text-decoration: none;
-    color: white;
 }
 
 .dropdown > .NavBarItem {
@@ -82,7 +81,7 @@ a{
     padding: 10px;
 }
 
-.dropdown:hover .Subnav {
+.dropdown:hover > .Subnav {
     display: block;
 }
 
@@ -91,13 +90,4 @@ a{
     text-decoration: none;
     display: block;
     padding: 8px 15px;
-}
-
-.SubNavItem:hover {
-    background-color: black;
-    color: #831010;
-}
-
-.main {
-    background-color: black;
 }
