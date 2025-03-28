@@ -14,24 +14,28 @@
 
 <body>
  <header>
-  <nav id="myTopnav" class="topnav">
+  <nav id="myTopnav" class="TopNav">
     <a class="NavBarItem" href="../index.html"><img src="img/Netflix_logo.svg" alt="Nepflix"></a>
     <div class="HeaderItems"></div>
     <a class="NavBarItem active" href="../index.html">Homepagina</a>
     <a class="NavBarItem" href="/Series/">Series</a>
     <a class="NavBarItem" href="/Films/">Films</a>
     <a class="NavBarItem" href="/Nieuw&Polulair/">Nieuw en populair</a>
-    </div> </nav>
-    <!-- Dropdown netflix logo -->
-    <div class="dropdown">
-      <a class="NavBarItem"><img src="img/Netflix_logo.svg" alt="Nepflix"></a>
-      <div class="Subnav">
-        <a href="../index.html" class="SubNavItem">Homepagina</a>
-        <a href="/Series/" class="SubNavItem">Series</a>
-        <a href="/Films/" class="SubNavItem">Films</a>
-        <a href="/Nieuw&Polulair/" class="SubNavItem">Nieuw en populair</a>
-      </div>
     </div>
+   </nav>
+    <!-- Dropdown netflix logo -->
+<div class="dropdown">
+    <a class="NavBarItem logo" href="../index.html"><img src="img/Netflix_logo.svg" alt="Nepflix"></a>
+    <a class="btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        bladeren
+        </a>
+    <ul class="dropdown-menu">
+    <li><a href="" class="dropdown-item active">Homepagina</a></li>
+    <li><a href="/Series/" class="dropdown-item">Series</a></li>
+    <li><a href="/Films/" class="dropdown-item">Films</a></li>
+    <li><a href="/Nieuw&Polulair/" class="dropdown-item">Nieuw en populair</a></li>
+    </ul>
+</div>
 </header>
     <main class="main">
     

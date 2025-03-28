@@ -1,11 +1,11 @@
 
-
-html {
-    background-color: black;
-    font-family: "Netflix-sans";
+@font-face {
+    font-family: 'Netflix-sans';
+    src: url('/fonts/NetflixSans-Regular.otf')
 }
 
 html body {
+    font-family: "Netflix-sans";
     background-color: #141414;
     color: #e5e5e5;
 }
@@ -18,10 +18,6 @@ html body {
     width: 100%;
 }
 
-@font-face {
-    font-family: 'Netflix-sans';
-    src: url('/fonts/NetflixSans-Regular.otf')
-}
 
 body header {
     font-size: 14px;
@@ -31,10 +27,10 @@ body header {
     background-size: cover;
 }
 
-header nav {
-    align-items: center;
-    padding: 0 60px;
+header nav, .dropdown {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, .7) 10%, transparent);
+    align-items: center;
+    padding: 0 3.192%;
     height: 68px;
     
 }
@@ -46,7 +42,7 @@ nav a {
     
 }
 
-nav a.active {
+nav .active , .dropdown .active {
     color: #ffffff;
     font-weight: bold;
 }
@@ -59,24 +55,22 @@ nav {
     overflow-x: auto;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+h2{
+    margin: 2.34%; /* 45px on full hd like it was before */
 }
-
 div.scroll-container {
     /* background-color: #333; */
-    padding:  0 35px;
+    padding:  0 1.82%; /* 35px on full hd like it was before */
     display: flex;
     /* width: 100%; */
     overflow-x: auto; 
 }
 
 div.scroll-container a {
-    padding: 10px;
+    padding: 0.52%; /*10px */
     max-width: 100%;
     width: 230.125px;
-    margin: 0 3px;
+    margin: 3px
 }
 
 div.scroll-container img {
@@ -95,20 +89,33 @@ a {
     color: white;
 }
 
-.dropdown {
+.dropdown{
     position: relative;
     display: none;
+}
+.dropdown a{
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Netflix-sans";
+    font-size: 8.76px;
+}
+.dropdown .dropdown-item{
+    color: #b3b3b3;
+
+}
+ul.dropdown-menu{
+    background-color: #000000e6;
+    padding: 5px;
+    font-size: 13px;
 }
 
 .dropdown  .NavBarItem {
     padding: 10px 15px;
     display: inline-block;
     left: 0;
-    background-color: black;
-    padding: 10px;
-    background-color: #333;
+    padding: 10px; 
     border-radius: 5px;
-    min-width: 180px;
+    min-width: 140px;
     margin-top: 5px;  
 }
 
@@ -118,99 +125,11 @@ a {
     color: #831010;
 }
 
-/* -----  Tablet styles ----- */
-@media screen and (max-width: 786px) {
-
-    .topnav {
-        padding: 0 20px;
-        height: 56px;
+@media screen and (max-width: 786px){
+    .TopNav{
         display: none;
     }
-
-    nav a {
-        font-size: 12px;
-    }
-
-    div.scroll-container {
-        padding: 5px;
-    }
-
-    div.scroll-container a {
-        width: 180px;
-    }
-
-    div.scroll-container img {
-        width: 180px;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .dropdown > .NavBarItem {
-        padding: 8px 12px;
-    }
-
-    .Subnav {
-        position: static;
-        width: 100%;
-        display: none;
-    }
-
-    .dropdown:hover > .Subnav {
-        display: block;
-    }
-
-    .dropdown {
-        display: block;
-    }
-
-
-}
-
-/* ----- Mobile styles ----- */
-@media screen and (max-width: 425px) {
-
-    .topnav {
-        display: none;
-    
-    }
-
-    nav a {
-        font-size: 10px;
-    }
-
-    div.scroll-container {
-        padding: 5px;
-       
-    }
-
-    div.scroll-container a {
-        width: 150px;
-        margin: 5px;
-    }
-
-    div.scroll-container img {
-        width: 150px;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .dropdown > .NavBarItem {
-        padding: 8px 10px;
-    }
-
-    .Subnav {
-        position: static;
-        width: 100%;
-        display: none;
-    }
-
-    .dropdown:hover > .Subnav {
+    .dropdown{
         display: block;
     }
 }
