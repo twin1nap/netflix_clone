@@ -56,14 +56,17 @@ nav {
     
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block; 
-}
+
 
 a{
     text-decoration: none;
     color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;  /* dit zorgt ervoor zodat alleen als er over de tekst wordt gehovverd dan popt hij het menu uit. */
+
 }
 
 .dropdown > .NavBarItem {
@@ -82,7 +85,7 @@ a{
     padding: 10px;
 }
 
-.dropdown:hover .Subnav {
+.dropdown:hover > .Subnav {
     display: block;
 }
 
@@ -93,11 +96,13 @@ a{
     padding: 8px 15px;
 }
 
+
 .SubNavItem:hover {
     background-color: black;
-    color: #831010;
+    color: white;
 }
 
 .main {
     background-color: black;
+    margin: 5%;
 }
