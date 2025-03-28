@@ -1,41 +1,67 @@
+
+
 html {
+    background-color: black;
     font-family: "Netflix-sans";
 }
-html body{
+
+html body {
     background-color: #141414;
     color: #e5e5e5;
 }
-#player{
+
+.icon {
+    display: none;
+}
+
+#player {
     width: 100%;
 }
+
 @font-face {
     font-family: 'Netflix-sans';
     src: url('/fonts/NetflixSans-Regular.otf')
 }
 
-body header{
+body header {
     font-size: 14px;
     background-image: url(/img/20210618_114823761_iOS.jpg);
-    height: 864px;
-
-
+    /* height: 864px; */
+    height: 45vw;
+    background-size: cover;
 }
-header nav{
+
+header nav {
     align-items: center;
     padding: 0 60px;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, .7) 10%, transparent);
     height: 68px;
     
 }
-nav a{
+
+nav a {
     color: #e5e5e5;
     font-size: 14px;
     text-decoration: none;
     
 }
-nav a.active{
+
+nav a.active {
     color: #ffffff;
     font-weight: bold;
+}
+nav {
+    display: flex;  
+    gap: 15px;  
+    /* background-color: black;   */
+    padding: 0 35px;
+    display: flex;
+    overflow-x: auto;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
 div.scroll-container {
@@ -51,84 +77,140 @@ div.scroll-container a {
     max-width: 100%;
     width: 230.125px;
     margin: 0 3px;
-    
-    /* background-image: url(https://occ-0-769-1490.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABR_cKboUYKjANkG-HxyrnKram89LRQq7H0M8zWKZcapua7eBpYJJQdDSIPWaNsV2AOKLJly8je0jaxI3l8u-oDwxRfw63lqarhJZfRzBT3sRHbklHhsBXRVa1ExzR6LH6Rgb9UOUOPLTeyEjBeUAlaLPMmJ903bvIakc5FITnQX1ZZmzBNA6DqKTtQQpQ0TXKdRfgXPkclGkrovw-Y_IPd4TVs1d_Jj5X6skTooQTMrzR7ttDtcAbKPPSsUCIucGr3uFaAccvETTOyw7iFaeh9Og-hvW9G2QQgIQoR-LeHtkTv8YgmnGl7Ujbvrlm2pjmd6GW2p6h85hJ_se7f91OoUjpRRF.webp?r=686); */
-    
 }
-div.scroll-container img{
-    border-radius: 5px;    
+
+div.scroll-container img {
+    border-radius: 5px;
     width: 230.125px;
 }
 
-
-  
-/* NAVIGATION MENU STYLING! */
-
+/* NAVIGATION MENU STYLING */
 nav {
-    display: flex;  
-    gap: 15px;  
-    
+    display: flex;
+    gap: 15px;
 }
 
-
-
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
 .dropdown {
     position: relative;
-    display: inline-block;  /* dit zorgt ervoor zodat alleen als er over de tekst wordt gehovverd dan popt hij het menu uit. */
-
+    display: none;
 }
 
-.dropdown > .NavBarItem {
+.dropdown  .NavBarItem {
     padding: 10px 15px;
     display: inline-block;
-    color: white;
-    text-decoration: none;
-}
-
-.Subnav {
-    display: none;
-    position: absolute;
-    top: 100%;
     left: 0;
+    background-color: black;
     padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    min-width: 180px;
+    margin-top: 5px;  
 }
 
-.dropdown:hover > .Subnav {
-    display: block;
+.dropdown:hover .Subnav 
+{
+    background-color: black;
+    color: #831010;
 }
 
-.SubNavItem {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 8px 15px;
-}
-
-
-.SubNavItem:hover {
-    color: white;
-}
-
-.main h2{
-    margin: 0 45px;
-}
-
-/* ----- Voor tablet ----- */
+/* -----  Tablet styles ----- */
 @media screen and (max-width: 786px) {
 
+    .topnav {
+        padding: 0 20px;
+        height: 56px;
+        display: none;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    div.scroll-container {
+        padding: 5px;
+    }
+
+    div.scroll-container a {
+        width: 180px;
+    }
+
+    div.scroll-container img {
+        width: 180px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown > .NavBarItem {
+        padding: 8px 12px;
+    }
+
+    .Subnav {
+        position: static;
+        width: 100%;
+        display: none;
+    }
+
+    .dropdown:hover > .Subnav {
+        display: block;
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+
 }
 
-
-
-
-/* ----- Voor mobiel ----- */
+/* ----- Mobile styles ----- */
 @media screen and (max-width: 425px) {
 
+    .topnav {
+        display: none;
+    
+    }
 
+    nav a {
+        font-size: 10px;
+    }
+
+    div.scroll-container {
+        padding: 5px;
+       
+    }
+
+    div.scroll-container a {
+        width: 150px;
+        margin: 5px;
+    }
+
+    div.scroll-container img {
+        width: 150px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown > .NavBarItem {
+        padding: 8px 10px;
+    }
+
+    .Subnav {
+        position: static;
+        width: 100%;
+        display: none;
+    }
+
+    .dropdown:hover > .Subnav {
+        display: block;
+    }
 }
-
