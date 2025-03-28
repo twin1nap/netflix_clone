@@ -93,7 +93,6 @@ a{
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: black;
     padding: 10px;
 }
 
@@ -110,11 +109,9 @@ a{
 
 
 .SubNavItem:hover {
-    background-color: black;
     color: white;
 }
 
-.main {
-    background-color: black;
-    margin: 5%;
+.main h2{
+    margin: 0 15px;
 }
