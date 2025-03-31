@@ -119,11 +119,6 @@ ul.dropdown-menu{
     margin-top: 5px;  
 }
 
-.dropdown:hover .Subnav 
-{
-    background-color: black;
-    color: #831010;
-}
 
 @media screen and (max-width: 786px){
     .TopNav{
