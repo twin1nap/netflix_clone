@@ -10,6 +10,18 @@ html body {
     color: #e5e5e5;
 }
 
+.movie.modal-content{
+    color: #ffffff;
+    background-color: #181818;
+}
+.movie.modal-content div{
+    border-bottom: none;
+    border-top: none;
+}
+.btn-close.dark{
+    filter: var(--bs-btn-close-white-filter);
+}
+
 .icon {
     display: none;
 }
