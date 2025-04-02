@@ -77,6 +77,7 @@ div.scroll-container {
     display: flex;
     /* width: 100%; */
     overflow-x: auto; 
+    overflow-y: visible;
 }
 
 div.scroll-container button {
@@ -146,3 +147,16 @@ button{
         display: block;
     }
 }
+
+
+.zoom {
+
+    transition: transform 2s;
+
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(150); /* Safari 3-8 */
+    transform: scale(2); 
+  }
