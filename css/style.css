@@ -77,7 +77,8 @@ div.scroll-container {
     display: flex;
     /* width: 100%; */
     overflow-x: auto; 
-    overflow-y: visible;
+    overflow-y: visible; /* so you can overflow*/
+    flex-wrap: nowrap; /* so it does not forse the child to stay inside*/
 }
 
 div.scroll-container button {
