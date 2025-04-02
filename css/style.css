@@ -13,6 +13,7 @@ html body {
 .movie.modal-content{
     color: #ffffff;
     background-color: #181818;
+    max-width: 90vw;
 }
 .movie.modal-content div{
     border-bottom: none;
