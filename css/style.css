@@ -4,6 +4,13 @@
     src: url('/fonts/NetflixSans-Regular.otf')
 }
 
+iframe {
+    width: 100%;
+    height: 500px; 
+    max-width: 100%;
+}
+
+
 html body {
     font-family: "Netflix-sans";
     background-color: #141414;
