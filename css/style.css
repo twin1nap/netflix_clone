@@ -76,6 +76,7 @@ div.scroll-container {
     padding:  0 1.82%; /* 35px on full hd like it was before */
     display: flex;
     /* width: 100%; */
+    overflow: visible;
     overflow-x: auto; 
     overflow-y: visible; /* so you can overflow*/
     flex-wrap: nowrap; /* so it does not forse the child to stay inside*/
